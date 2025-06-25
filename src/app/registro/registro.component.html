@@ -6,7 +6,7 @@
     <div class="module">
         <h2>Registro de Usuario</h2>
         <form class="form" (submit)="submitForm()">
-            <div class="alert alert-error"></div>
+            
             <input  type="text"
                     id="nombre"
                     placeholder="Nombre" 
@@ -31,19 +31,19 @@
                     name="email"
                     minlength="4"
                     maxlength="25"
-                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$"
                     required
                     [(ngModel)]="formState.email"
                     #email="ngModel">
             <input  type="text"
                     id="telefono"
                     placeholder="Teléfono" 
-                    name="telefono" 
-                    required
+                    name="telefono"
                     [(ngModel)]="formState.telefono"
                     #telefono="ngModel">
             <input  type="password"
                     id="password"
+                    minlength="6"
+                    maxlength="10"
                     placeholder="Contraseña" 
                     name="password" 
                     required
@@ -51,9 +51,13 @@
                     #password="ngModel">
             <input  type="password"
                     id="confirmpassword"
-                    placeholder="Confirm Password" 
-                    name="confirmpassword" 
-                    required>
+                    placeholder="Confirme Contraseña" 
+                    name="confirmPassword"
+                    minlength="6"
+                    maxlength="10"
+                    required
+                    [(ngModel)]="formState.confirmPassword"
+                    #confirmPassword = "ngModel">
             
             <button type="submit" class="btn btn-block btn-primary">Enviar</button>
         </form>

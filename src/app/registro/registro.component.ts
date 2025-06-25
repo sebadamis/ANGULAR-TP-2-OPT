@@ -7,7 +7,8 @@ interface Usuario {
   apellido: string,
   telefono: string,
   email: string,
-  password: string
+  password: string,
+  confirmPassword: string
 }
 
 @Component({
@@ -27,14 +28,15 @@ export class Registro {
       telefono: this.formState.telefono,
       email: this.formState.email,
       password: this.formState.password,
-      id: this.formState.id + 1
+      confirmPassword: this.formState.confirmPassword,
+      id: this.usuarios.length + 1
     })
-    // this.formState.nombre = "",
-    // this.formState.apellido = "",
-    // this.formState.telefono = "",
-    // this.formState.email = "",
-    // this.formState.password = "",
-    // this.formState.id = 0
+    this.formState.nombre = "",
+    this.formState.apellido = "",
+    this.formState.telefono = "",
+    this.formState.email = "",
+    this.formState.password = "",
+    this.formState.confirmPassword = ""
   }
   formState = {
     nombre: "",
@@ -42,6 +44,6 @@ export class Registro {
     telefono: "",
     email: "",
     password: "",
-    id: 0
+    confirmPassword: ""
   }
 }
