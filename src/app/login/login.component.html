@@ -2,11 +2,37 @@
 
 <div class="login-page">
     <div class="form">
-        <form class="login-form">
-            <input type="mail" placeholder="mail@mail.com" />
-            <input type="password" placeholder="Contraseña" />
-            <button>login</button>
-            <button class="btn btn-success">peligro</button>
+        <form class="login-form" (submit)="submitFormLogin()">
+            <div class="input-content">
+                <input  type="email"
+                        id="email"
+                        name="email"
+                        placeholder="mail@mail.com"
+                        required
+                        minlength="5"
+                        maxlength="20"
+                        [(ngModel)]="formStado.email"
+                        #email="ngModel"/>
+                    @if((email.dirty || email.touched) && email.invalid){
+                    <span class="error-text">El Mail debe tener entre 5 y 20 caracteres</span>
+                    }
+            </div>
+            <br>
+            <div class="input-content">
+                <input  type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Contraseña"
+                        required
+                        minlength="6"
+                        maxlength="10"
+                        [(ngModel)]="formStado.password"
+                        #password="ngModel"/>
+                    @if((password.dirty || password.touched) && password.invalid){
+                    <span class="error-text">La contraseña debe tener entre 6 y 10 caracteres</span>
+                    }
+            </div>
+            <button type="submit">login</button>
         </form>
     </div>
 </div>
