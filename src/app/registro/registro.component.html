@@ -17,6 +17,9 @@
                     required 
                     [(ngModel)]="formState.nombre"
                     #nombre="ngModel">
+                @if((nombre.dirty || nombre.touched) && nombre.invalid){
+                <span class="error-text">El nombre debe tener entre 3 y 10 caracteres</span>
+                }
             </div>
             <div class="input-container">
                 <label for="apellido">Apellido:</label>
@@ -29,6 +32,9 @@
                     required
                     [(ngModel)]="formState.apellido"
                     #apellido="ngModel">
+                @if((apellido.dirty || apellido.touched) && apellido.invalid){
+                <span class="error-text">El apellido debe tener entre 2 y 15 caracteres</span>
+                }
             </div>
             <div class="input-container">
                 <label for="email">Mail:</label>
@@ -36,11 +42,14 @@
                     id="email"
                     placeholder="Email" 
                     name="email"
-                    minlength="4"
-                    maxlength="25"
+                    minlength="5"
+                    maxlength="20"
                     required
                     [(ngModel)]="formState.email"
                     #email="ngModel">
+                @if((email.dirty || email.touched) && email.invalid){
+                <span class="error-text">El Mail debe tener entre 5 y 20 caracteres</span>
+                }
             </div>
             <div class="input-container">
                 <label for="telefono">Teléfono:</label>
@@ -62,6 +71,9 @@
                     required
                     [(ngModel)]="formState.password"
                     #password="ngModel">
+                @if((password.dirty || password.touched) && password.invalid){
+                <span class="error-text">La contraseña debe tener entre 6 y 10 caracteres</span>
+                }
             </div>
             <div class="input-container">
                 <label for="confirmPassword">Confirme Password:</label>
@@ -74,9 +86,10 @@
                     required
                     [(ngModel)]="formState.confirmPassword"
                     #confirmPassword = "ngModel">
+                @if((confirmPassword.dirty || confirmPassword.touched) && confirmPassword.invalid){
+                <span class="error-text">La contraseña debe tener entre 6 y 10 caracteres</span>
+                }
             </div>
-            
-            
             <button type="submit" class="btn btn-block btn-primary">Enviar</button>
         </form>
     </div>
