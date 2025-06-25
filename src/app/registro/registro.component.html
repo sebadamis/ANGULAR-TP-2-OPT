@@ -1,1 +1,61 @@
-<p>REGISTRO</p>
+
+
+<h1>REGISTRO</h1>
+
+<div class="body-content">
+    <div class="module">
+        <h2>Registro de Usuario</h2>
+        <form class="form" (submit)="submitForm()">
+            <div class="alert alert-error"></div>
+            <input  type="text"
+                    id="nombre"
+                    placeholder="Nombre" 
+                    name="nombre"
+                    minlength="3"
+                    maxlength="10"
+                    required 
+                    [(ngModel)]="formState.nombre"
+                    #nombre="ngModel">
+            <input  type="text" 
+                    placeholder="Apellido" 
+                    name="apellido"
+                    id="apellido"
+                    minlength="2"
+                    maxlength="15"
+                    required
+                    [(ngModel)]="formState.apellido"
+                    #apellido="ngModel">
+            <input  type="email"
+                    id="email"
+                    placeholder="Email" 
+                    name="email"
+                    minlength="4"
+                    maxlength="25"
+                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$"
+                    required
+                    [(ngModel)]="formState.email"
+                    #email="ngModel">
+            <input  type="text"
+                    id="telefono"
+                    placeholder="Teléfono" 
+                    name="telefono" 
+                    required
+                    [(ngModel)]="formState.telefono"
+                    #telefono="ngModel">
+            <input  type="password"
+                    id="password"
+                    placeholder="Contraseña" 
+                    name="password" 
+                    required
+                    [(ngModel)]="formState.password"
+                    #password="ngModel">
+            <input  type="password"
+                    id="confirmpassword"
+                    placeholder="Confirm Password" 
+                    name="confirmpassword" 
+                    required>
+            
+            <button type="submit" class="btn btn-block btn-primary">Enviar</button>
+        </form>
+    </div>
+</div>
