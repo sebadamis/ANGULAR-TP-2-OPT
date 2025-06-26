@@ -23,9 +23,10 @@
 .footer {
     display: flex;
     bottom: 0;
-    background-color: #4f5358;
-    color: #fff;
-    padding: 1rem;
+    background-color: #e9ecef;
+    color: black;
+    padding: 0 1rem;
+    font-weight: 600;
 }
 
 .footer span {
@@ -49,5 +50,12 @@
 }
 
 .footer a {
-    color: #fff;
+    color: black;
+    font-weight: 400;
+}
+
+.span-footer {
+    display: flex;
+    align-items: center;
+    justify-items: center;
 }
