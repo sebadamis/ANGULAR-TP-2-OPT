@@ -26,7 +26,7 @@
     font-size: 14px;
 }
 
-.form button {
+.form .button {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-transform: uppercase;
     outline: 0;
@@ -41,9 +41,9 @@
     cursor: pointer;
 }
 
-.form button:hover,
-.form button:active,
-.form button:focus {
+.form .button:hover,
+.form .button:active,
+.form .button:focus {
     background: #43A047;
 }
 
