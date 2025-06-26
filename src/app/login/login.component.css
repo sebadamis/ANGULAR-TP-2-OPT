@@ -39,23 +39,17 @@
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
     cursor: pointer;
+    border-radius: 15px;
 }
 
 .form .button:hover,
 .form .button:active,
 .form .button:focus {
-    background: #43A047;
+    background: #2b7c2f;
 }
 
 
-body {
-    background: #76b852;
-    background: rgb(141, 194, 111);
-    background: linear-gradient(90deg, rgba(141, 194, 111, 1) 0%, rgba(118, 184, 82, 1) 50%);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+
 h1, h2 {
     text-align: center;
     font-size: 2.5rem;

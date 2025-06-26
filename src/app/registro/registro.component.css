@@ -57,8 +57,9 @@ body {
     width: 45%;
     margin-left: auto;
     margin-right: auto;
-    background: green;
+    background: rgb(69, 234, 157);
     margin-bottom: 2rem;
+    border-radius: 15px;
 }
 
 
@@ -76,8 +77,8 @@ input[type="email"] {
     font-size: 15px;
     line-height: 20px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgba(255, 255, 255, 0.7);
+    background-color: black;
+    color: white;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 2px;
@@ -102,8 +103,8 @@ input[type="text"]:hover,
 input[type="password"]:hover,
 input[type="email"]:hover {
     border-color: rgba(255, 255, 255, 0.5);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(0, 0, 0, 0.522);
+    color: rgb(255, 255, 255);
 }
 
 

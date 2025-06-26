@@ -17,13 +17,13 @@
 }
 
 .main-content {
-    height: calc(90vh - 0px);
+    height: calc(100vh - 0px);
 }
 
 .footer {
     display: flex;
     bottom: 0;
-    background-color: #e9ecef;
+    background-color: #adb2b6;
     color: black;
     padding: 0 1rem;
     font-weight: 600;
