@@ -5,7 +5,15 @@
 }
 .navbar {
     height: 60px;
-    background-color: #0d6efd;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60px;
+    width: 120px;
+    padding: 0 10px;
+    margin-top: 7px;
 }
 
 .main-content {
@@ -15,7 +23,7 @@
 .footer {
     display: flex;
     bottom: 0;
-    background-color: #0d6efd;
+    background-color: #4f5358;
     color: #fff;
     padding: 1rem;
 }
