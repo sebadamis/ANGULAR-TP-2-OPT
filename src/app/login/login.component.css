@@ -1,20 +1,30 @@
 .login-page {
+    display: flex;
     width: 360px;
     padding: 8% 0 0;
     margin: auto;
 }
 
 .form {
+    display: flex;
+    height: auto;
     z-index: 1;
     background: #FFFFFF;
-    max-width: 360px;
-    margin: 0 auto 100px;
+    margin: 0 auto;
     padding: 45px;
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
+.input-content {
+    display: flexbox;
+    height: auto;
+    width: 90%;
+    margin: 0.25rem auto;
+}
+
 .form input {
+    display: flex;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     outline: 0;
     background: #f2f2f2;
@@ -50,6 +60,8 @@
 
 
 
+
+
 h1, h2 {
     text-align: center;
     font-size: 2.5rem;
@@ -59,4 +71,14 @@ h1, h2 {
     color: crimson;
     background-color: yellow;
     font-weight: 800;
+    width: 85%
+}
+
+@media (width < 405px) {
+    .login-page {
+        width: 70%
+    }
+    .error-text {
+        width: 55%
+    }
 }
