@@ -55,12 +55,12 @@ body {
     display: flex;
     contain: content;
     top: 10px;
-    height: 85%;
-    width: 45%;
+    height: 90%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     background: rgb(69, 234, 157);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     border-radius: 15px;
 }
 
@@ -139,6 +139,7 @@ input[type="email"]:focus {
         background-color 0.2s, border-color 0.2s, color 0.2s;
     transition: background-color 0.2s, box-shadow 0.2s, background-color 0.2s,
         border-color 0.2s, color 0.2s;
+    text-align: center;
 }
 
 .btn.active,
@@ -159,6 +160,7 @@ input[type="email"]:focus {
     color: #ffffff;
     border-color: rgba(255, 255, 255, 0.3);
     box-shadow: 0 0 rgba(0, 0, 0, 0);
+    text-align: center;
 }
 
 .btn:active,
@@ -167,6 +169,7 @@ input[type="email"]:focus {
     color: rgba(255, 255, 255, 0.8);
     border-color: rgba(255, 255, 255, 0.07);
     box-shadow: inset 1.5px 1.5px 3px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
 .btn-primary {
@@ -184,6 +187,7 @@ input[type="email"]:focus {
     border: 0;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3),
         0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+    text-align: center;
 }
 
 .btn-primary:hover,
@@ -192,6 +196,7 @@ input[type="email"]:focus {
     color: #ffffff;
     border-color: transparent;
     box-shadow: 0 0 rgba(0, 0, 0, 0);
+    text-align: center;
 }
 
 .btn-primary:active,
@@ -200,12 +205,14 @@ input[type="email"]:focus {
     color: rgba(255, 255, 255, 0.7);
     border-color: transparent;
     box-shadow: inset 1.5px 1.5px 3px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
     background-image: -webkit-linear-gradient(top, #37c0ff, #0097dd);
     background-image: linear-gradient(to bottom, #37c0ff, #0097dd);
+    text-align: center;
 }
 
 .btn-primary:active,
@@ -214,13 +221,16 @@ input[type="email"]:focus {
     background-image: linear-gradient(to bottom, #006ea1, #00608d);
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6) inset,
         0 0 0 1px rgba(255, 255, 255, 0.07) inset;
+    text-align: center;
 }
 
-.btn-block {
-    display: block;
+.boton {
+    display: flex;
     width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .error-text {
@@ -231,12 +241,23 @@ input[type="email"]:focus {
 }
 
 @media (width < 1065px) {
+    .body-content {
+        height: 70%;
+    }
+
     input[type="text"],
     input[type="password"],
     input[type="email"] {
-        width: 60%;
+        width: 70%;
+    }
+    label {
+        display: none;
+    }
+    .boton {
+        width: 70%;
     }
     .error-text{
-        width: 45%;
+        width: 50%;
+        height: 90%;
     }
 }
